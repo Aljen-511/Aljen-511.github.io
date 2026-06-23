@@ -1,0 +1,27 @@
+# NexT Theme Configuration Overrides
+# See: https://theme-next.js.org/docs/theme-settings/
+
+# Scheme: Muse | Mist | Pisces | Gemini
+scheme: Gemini
+
+# Sidebar
+sidebar:
+  position: left
+  display: post
+
+# MathJax
+math:
+  per_page: true
+  mathjax:
+    enable: true
+    mhchem: false
+  katex:
+    enable: false
+
+# Code block
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+  copy_button:
+    enable: true

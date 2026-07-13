@@ -14,6 +14,7 @@ math:
   per_page: true
   mathjax:
     enable: true
+    tags: ams
     mhchem: false
   katex:
     enable: false

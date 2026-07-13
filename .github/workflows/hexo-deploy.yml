@@ -19,9 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,16 +26,11 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Setup Pandoc
-        uses: pandoc/actions/setup@v1
-        with:
-          version: 3.2
-
       - name: Install dependencies
         run: npm ci
 
       - name: Build Hexo site
-        run: npx hexo generate
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
